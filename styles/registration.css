@@ -1,0 +1,150 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*top nav bar starts*/
+.topbar_1_line {
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.topbarline {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #111111;
+    display: inline-flex;
+    align-items: center;
+}
+
+.topbaricon {
+    border: 8px solid;
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #ea062b;
+
+}
+
+.topbarline_right {
+    background-color: #ea062b;
+    height: 42px;
+    display: inline-grid;
+    align-content: center;
+    color: #ffffff;
+}
+
+/* end*/
+
+/*navbar2*/
+.menubar2_left {
+    background-color: #ea062b;
+    font-weight: 500;
+    display: inline-flex;
+    border: 3px solid;
+}
+
+.menubar2_left a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*end*/
+.heading {
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    font-family: initial;
+    font-weight: 600;
+}
+
+/*containercard*/
+.containercard {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 500px;
+}
+
+/*end containercard*/
+.bgclass {
+    background-color: rgb(7, 105, 185);
+    ;
+}
+
+.img1 {
+    width: 100%;
+    height: 690px;
+}
+
+.grid2h3 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.titleone {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+
+}
+
+.w-48 {
+    width: 48%
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.radio1 {
+    display: inline-flex;
+    align-items: center;
+}
+
+.singlefield {
+    margin: 20px;
+}
+
+.card {
+    border-radius: 0;
+}
+
+.footer1 {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+}
+
+.footertextlist {
+    color: #ffffff;
+}
+
+.footercontent {
+    color: #ffffff;
+}
+
+.newsfooter {
+    width: 100%;
+    height: 85px;
+}
+
+.footerheading {
+    margin-bottom: 35px;
+    font-size: 28px;
+}
+
+.addtextarea {
+    margin: 20px;
+    width: 696px;
+    height: 206px;
+}
+
+.logo {
+    width: 22%;
+}
