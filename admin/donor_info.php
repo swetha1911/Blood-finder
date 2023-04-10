@@ -132,7 +132,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                                 <div class="progress mb-2">
                                     <div class="progress-bar progress-animated bg-primary" style="width: 80%"></div>
                                 </div>
-                                <small>80% Increase in 20 Days</small>
                             </div>
                         </div>
                     </div>
@@ -146,7 +145,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                                 <div class="progress mb-2">
                                     <div class="progress-bar progress-animated bg-primary" style="width: 80%"></div>
                                 </div>
-                                <small>80% Increase in 20 Days</small>
                             </div>
                         </div>
                     </div>

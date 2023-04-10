@@ -48,7 +48,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
 <body id="body-pd" >
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <!-- <div class="header_img"> <img src="assets/profile.png" alt=""> </div> -->
     </header>
     <div class="l-navbar" id="nav-bar">
         <div>
@@ -59,7 +58,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                 <div>
                     <img class="logo mx-4" src="assets/profile.png"></img>
                 </div>
-                <!-- <hr class="hr" /> -->
 
                 <ul class="nav mt-5">
                     <a class="nav-link active" href="#"><i class="fa fa-user" aria-hidden="true"></i>
@@ -103,7 +101,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                                 <div class="progress mb-2 bg-secondary">
                                     <div class="progress-bar progress-animated bg-light" style="width: 80%"></div>
                                 </div>
-                                <!-- <small>80% Increase in 20 Days</small> -->
                             </div>
                         </div>
                     </div>
@@ -124,7 +121,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                                 <div class="progress mb-2 bg-primary">
                                     <div class="progress-bar progress-animated bg-light" style="width: 30%"></div>
                                 </div>
-                                <!-- <small>50% Increase in 25 Days</small> -->
                             </div>
                         </div>
                     </div>
@@ -145,7 +141,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                                 <div class="progress mb-2 bg-primary">
                                     <div class="progress-bar progress-animated bg-light" style="width: 76%"></div>
                                 </div>
-                                <!-- <small>76% Increase in 20 Days</small> -->
                             </div>
                         </div>
                     </div>
@@ -166,7 +161,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                                 <div class="progress mb-2 bg-secondary">
                                     <div class="progress-bar progress-animated bg-light" style="width: 30%"></div>
                                 </div>
-                                <!-- <small>30% Increase in 30 Days</small> -->
                             </div>
                         </div>
                     </div>
@@ -183,7 +177,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                         <div class="progress mb-2">
                             <div class="progress-bar progress-animated bg-primary" style="width: 80%"></div>
                         </div>
-                        <!-- <small>80% Increase in 20 Days</small> -->
                     </div>
                 </div>
             </div>
@@ -197,7 +190,6 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                         <div class="progress mb-2">
                             <div class="progress-bar progress-animated bg-warning" style="width: 50%"></div>
                         </div>
-                        <!-- <small>50% Increase in 25 Days</small> -->
                     </div>
                 </div>
             </div>
