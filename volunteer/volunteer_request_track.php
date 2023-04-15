@@ -37,10 +37,13 @@
             color: white !important;
         }
     </style>
+    <?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    ?>
 </head>
-<?php
-session_start();
-?>
+
 
 
 <body id="body-pd">
@@ -61,6 +64,11 @@ session_start();
                         <a class="nav-link active" href="verification_criteria.php"><i class="fa fa-user"
                                 aria-hidden="true"></i>
                             Screening Criteria</a>
+                    </li>
+                    <li class="nav-item" style="position: absolute;right: 10%;top: 4%">
+                        <label>
+                            <?php echo $_SESSION['fname'] ?>
+                        </label>
                     </li>
                     <li class="nav-item" style="position: absolute;right: 0">
                         <a class="nav-link active" href="../index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -133,7 +141,7 @@ session_start();
                                             ?>
                                             <div class="col-6">
                                                 <div class="card mb-5" style="border-radius: 15px;">
-                                                    <div class="card-body p-4">
+                                                    <div class="card-body p-4" style="box-shadow: 5px 5px 13px 6px lightgrey">
                                                         <h3 class="mb-3"></h3>
                                                         <p class="card-header d-flex justify-content-between">
                                                             <span>
@@ -185,15 +193,18 @@ session_start();
                                                                     </strong>
                                                                 </p>
                                                                 <div class="text-start w-100">
+
+
+                                                                    <!-- confirm button -->
                                                                     <button
-                                                                        onclick="<?php $_SESSION['req_id'] = $row['id'];
-                                                                        $_SESSION['action'] = 'confirm'; ?>;window.location.href = 'volunteer_action.php';"
-                                                                        class="btn btn-success">Confirm</button>
-                                                                        <!-- <button
-                                                                        onclick="<?php $_SESSION['req_id'] = $row['id'];
-                                                                        $_SESSION['action'] = 'reject'; ?>;window.location.href = 'volunteer_action.php';"
-                                                                        class="btn btn-danger">Reject</button> -->
-                                                                  
+                                                                        onclick="window.location.href = 
+                                                                        'volunteer_action.php?req_id=<?php echo $row['id'] ?>&blood=<?php echo $row['bloodgroup'] ?>&action=<?php echo 'confirm' ?>'"
+                                                                        class=" btn btn-success">Confirm</button>
+                                                                    <!-- reject button -->
+                                                                    <button
+                                                                        onclick="window.location.href = 
+                                                                        'volunteer_action.php?req_id=<?php echo $row['id'] ?>&blood=<?php echo $row['bloodgroup'] ?>&action=<?php echo 'reject' ?>'"
+                                                                        class=" btn btn-danger">Reject</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -257,7 +268,7 @@ session_start();
                                             ?>
                                             <div class="col-6">
                                                 <div class="card mb-5" style="border-radius: 15px;">
-                                                    <div class="card-body p-4">
+                                                    <div class="card-body p-4" style="box-shadow: 5px 5px 13px 6px lightgrey">
                                                         <h3 class="mb-3"></h3>
                                                         <p class="card-header d-flex justify-content-between">
                                                             <span>
@@ -366,8 +377,8 @@ session_start();
                                             }
                                             ?>
                                             <div class="col-6">
-                                                <div class="card mb-5" style="border-radius: 15px;">
-                                                    <div class="card-body p-4">
+                                                <div class="card" style="border-radius: 15px;">
+                                                    <div class="card-body p-4" style="box-shadow: 5px 5px 13px 6px lightgrey">
                                                         <h3 class="mb-3"></h3>
                                                         <p class="card-header d-flex justify-content-between">
                                                             <span>
@@ -438,5 +449,6 @@ session_start();
             </div>
         </div>
     </div>
+
 
 </body>
