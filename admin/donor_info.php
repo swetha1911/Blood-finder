@@ -135,7 +135,7 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12 mt-2 col-lg-6 col-sm-6">
+                    <!-- <div class="col-xl-12 mt-2 col-lg-6 col-sm-6">
                         <div class="widget-stat card">
                             <div class="card-body p-4">
                                 <h4 class="card-title">Total Rejected request</h4>
@@ -147,7 +147,7 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="col-lg-6">
