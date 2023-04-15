@@ -47,7 +47,7 @@
 
     <div class="row d-flex flex-row justify-content-center"
         style="padding: inherit;transition: all 0s ease 0s;margin-right: 0px;margin-top: 5em">
-        <div class="col-md-8">
+        <div class="col-md-8" style="box-shadow: 5px 5px 13px 6px lightgrey">
             <div class="d-flex align-items-center justify-content-center my-4">
                 <h3 class="text-center fw-bold mx-3 mb-0">Add Volunteer</h3>
             </div>

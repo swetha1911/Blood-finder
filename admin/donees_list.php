@@ -86,7 +86,7 @@ $result = mysqli_query($conn, $sql);
                     }
                     echo '<div class="w-48 mx-1">
             <div class="card mb-4">
-                <div class="card-body d-flex justify-content-around flex-row">
+                <div class="card-body d-flex justify-content-around flex-row" style="box-shadow: 5px 5px 13px 6px lightgrey">
                 
                     <div class="d-flex flex-column w-25">
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"

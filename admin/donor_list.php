@@ -94,8 +94,8 @@ $result = mysqli_query($conn, $sql);
                             $bgroup = "AB-";
                     }
                     echo '<div class="col-lg-3 mx-1">
-            <div class="card mb-4">
-                <div class="card-body d-flex justify-content-around flex-row">
+            <div class="card mb-1" style="word-break: break-all;box-shadow: 5px 5px 13px 6px lightgrey">
+                <div class="card-body d-flex justify-content-even flex-row">
                 
                     <div class="d-flex flex-column justify-content-center">
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"

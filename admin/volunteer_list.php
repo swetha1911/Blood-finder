@@ -74,8 +74,8 @@ $result = mysqli_query($conn, $sql);
             <?php
             if (mysqli_num_rows($result) > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="col-lg-3 mx-1">
-            <div class="card mb-4">
+                    echo '<div class="col-lg-3 mx-1" style="box-shadow: 5px 5px 13px 6px lightgrey">
+            <div class="card">
                 <div class="card-body d-flex justify-content-around flex-row">
                 
                     <div class="d-flex flex-column justify-content-center">
@@ -88,8 +88,7 @@ $result = mysqli_query($conn, $sql);
                     <div>
                         <p><strong>Email:</strong> <span>' . $row['email'] . '</span></p>
                         <p><strong>Mobile:</strong> <span>' . $row['mobile'] . '</span></p>
-                       <a href="script/Delete_volunteer.php">
-                        <button class="btn btn-danger" onclick=' . $_SESSION['volunt_id']=$row['id'] . '>Delete</button></a>
+                        <button class="btn btn-danger" onclick="window.location.href = \'script/Delete_volunteer.php?volunt_id= '.$row['id'].'\'">Delete</button>
                     </div>
                     <div>
                 </div>

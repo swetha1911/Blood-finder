@@ -25,16 +25,18 @@ $sql = "SELECT * FROM blood_list";
 $result = mysqli_query($conn, $sql);
 ?>
 
-<body
+<!-- <body
     style="background-image: url(
-    https://script.viserlab.com/bloodlab/assets/images/frontend/how_it_work/60fff8d9bc57d1627388121.jpg);color: white;">
+    https://script.viserlab.com/bloodlab/assets/images/frontend/how_it_work/60fff8d9bc57d1627388121.jpg);color: white;"> -->
+
+<body>
     <!-- <div class="header" style="position: absolute"> -->
     <!-- <img src="img/bloog_logo.jpeg" alt=""> -->
     <!-- <a href="../index.php"> -->
     <!-- <img src="../img/blood_logo.jpg" style="width: 22%" class="logo" alt="logo"></a> -->
     <!-- </div> -->
     <!--==grid body== -->
-    <div class="container w-50">
+    <div class="container w-50" style="border: 1px solid;box-shadow: 5px 5px 13px 6px lightgrey">
 
         <div class="row d-flex mt-2 justify-content-between">
             <!-- <div class="col-lg-6 grid1_2">
@@ -108,7 +110,8 @@ $result = mysqli_query($conn, $sql);
                             <input type="text" class="form-control" name="health" placeholder="Health Issues">
                         </div>
                         <div class="singlefield">
-                            <input type="tel" class="form-control" maxlength="10" name="mobile" placeholder="Phone Number">
+                            <input type="tel" class="form-control" maxlength="10" name="mobile"
+                                placeholder="Phone Number">
                         </div>
                         <div class="singlefield">
                             <input type="email" class="form-control" name="email" placeholder="Email Id">
@@ -121,6 +124,13 @@ $result = mysqli_query($conn, $sql);
                             &nbsp; &nbsp;
                             <a href="../index.php"><button type="button" class="btn btn-danger">Home</button></a>
                             &nbsp; &nbsp;
+                        </div>
+                        <div style="margin-bottom: 10px">
+                            <b>Note:</b> <strong>Once you subimitted form , we will update
+                                    your requirements List
+                                    and we will notify all our donors by sending Email . Once you find donor so we will
+                                    remove your contact number from all our post and we will mark it as closed.</strong>
+                            
                         </div>
                 </form>
 
