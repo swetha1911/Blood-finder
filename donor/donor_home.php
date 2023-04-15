@@ -100,6 +100,11 @@
                                 aria-hidden="true"></i>
                             Request</a>
                     </li>
+                    <li class="nav-item" style="position: absolute;right: 10%;top: 6%">
+                        <label>
+                            <?php echo $_SESSION['fname'] ?>
+                        </label>
+                    </li>
                     <li class="nav-item active" style="position: absolute;right: 10px">
                         <a class="nav-linkb active" href="../index.php"><i class="fa fa-sign-out"
                                 aria-hidden="true"></i>
@@ -110,7 +115,7 @@
             </div>
         </nav>
     </div>
-    <section >
+    <section>
         <div class="container-fluid w-100 m-2">
             <div class="row">
                 <div class="col-lg-6">

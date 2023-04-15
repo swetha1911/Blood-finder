@@ -56,6 +56,9 @@ session_start();
                         <a class="nav-link active" href="#"><i class="fa fa-user" aria-hidden="true"></i>
                             Request</a>
                     </li>
+                    <li class="nav-item" style="position: absolute;right: 10%;top: 6%">
+                        <label> <?php echo $_SESSION['fname'] ?></label>
+                    </li>
                     <li class="nav-item" style="position: absolute;right: 10px">
                         <a class="nav-link active" href="../index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>
                             Logout</a>
