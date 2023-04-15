@@ -23,7 +23,7 @@ if (mysqli_num_rows($result) == 1) {
         $_SESSION['lname'] = $row['l_name'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['role'] = $row['role'];
-        header("Location: ../volunteer/volunteer_home.php?success= successfully logged in");
+        header("Location: ../volunteer/volunteer_home.php?success=successfully logged in");
         exit();
     }
 } else {

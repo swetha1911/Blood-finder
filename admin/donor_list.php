@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="card-body d-flex justify-content-even flex-row">
                 
                     <div class="d-flex flex-column justify-content-center">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                        <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="
                             alt="avatar" class="rounded-circle img-fluid" style="width: 50%;">
                         <h5 class="my-3 text-start mx-4">
                             ' . $row['f_name'] . ' </h5>
@@ -112,7 +112,9 @@ $result = mysqli_query($conn, $sql);
                    
                     </div>
                     <div class="card-footer text-center">
-                    <a href="donor_info.php"><button onclick= '.$_SESSION['donor_id'] = $row['id'].'" type="button" class="btn btn-primary">view</button> </a>                 
+                    <a href="donor_info.php"><button onclick= ' . $_SESSION['donor_id'] = $row['id'] . '" type="button" class="btn btn-primary">view</button> </a>
+                    <button class="btn btn-danger" onclick="window.location.href = \'script/Delete_donor.php?don_id='.$row['id']. '\'">Delete</button>
+                 
                     </div> 
                     </div> 
                    

@@ -119,8 +119,8 @@ $result = mysqli_query($conn, $sql);
                         <div class="singlefield">
                             <button type="submit" class="btn btn-primary">Submit</button>
                             &nbsp; &nbsp;
-                            <a href="donees_request_track.php"><button type="button"
-                                    class="btn btn-danger">Track</button></a>
+                            <!-- <a href="donees_request_track.php"><button type="button"
+                                    class="btn btn-danger">Track</button></a> -->
                             &nbsp; &nbsp;
                             <a href="../index.php"><button type="button" class="btn btn-danger">Home</button></a>
                             &nbsp; &nbsp;
@@ -128,8 +128,7 @@ $result = mysqli_query($conn, $sql);
                         <div style="margin-bottom: 10px">
                             <b>Note:</b> <strong>Once you subimitted form , we will update
                                     your requirements List
-                                    and we will notify all our donors by sending Email . Once you find donor so we will
-                                    remove your contact number from all our post and we will mark it as closed.</strong>
+                                    and we will notify all our donors by sending Email . Once you find donor your profile will be marked as approved.</strong>
                             
                         </div>
                 </form>

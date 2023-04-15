@@ -12,7 +12,7 @@
             <img src="assets/login_background.png" class="img-fluid" alt="Sample image">
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-            <form name="f1" onsubmit="return validation()" action="script/admi_login.php" method="post" style="
+            <form name="f1" onsubmit="return validation()" action="script/admin_login.php" method="post" style="
     box-shadow: 5px 5px 13px 6px lightgrey;" class="card p-5">
                 <div class="d-flex align-items-center justify-content-center my-4">
                     <h3 class="text-center fw-bold mx-3 mb-0">Admin Login</h3>

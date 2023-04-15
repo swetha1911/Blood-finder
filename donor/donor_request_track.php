@@ -80,10 +80,10 @@ session_start();
                     <button class="nav-link " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
                         type="button" role="tab" aria-controls="profile" aria-selected="false">Accepted</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <!-- <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
                         type="button" role="tab" aria-controls="contact" aria-selected="false">Rejected</button>
-                </li>
+                </li> -->
             </ul>
             <!-- new req content -->
             <div class="tab-content" id="myTabContent">

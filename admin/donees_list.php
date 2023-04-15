@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="card-body d-flex justify-content-around flex-row" style="box-shadow: 5px 5px 13px 6px lightgrey">
                 
                     <div class="d-flex flex-column w-25">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                        <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="
                             alt="avatar" class="rounded-circle img-fluid" style="width: 50%;">
                         <h5 class="text-start mt-3">
                             ' . $row['f_name'] . ' </h5>
