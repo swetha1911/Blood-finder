@@ -60,12 +60,23 @@ CREATE TABLE `users` (
   `password` varchar(50) NOT NULL,
   `address` varchar(100) NOT NULL,
   `gender` varchar(10) NOT NULL,
-  `bloodgroup` varchar(3) NOT NULL,
-  `alchohol` varchar(10) NOT NULL,
-  `health` varchar(100) NOT NULL,
+  `bloodgroup` varchar(3) NOT NULL COMMENT '1 -> O+,\r\n2-> O-,\r\n3-> A+,\r\n4-> A-,\r\n5-> B+,\r\n6-> B-.\r\n7-> AB+,\r\n8-> AB-',
+  `alchohol` varchar(1000) NOT NULL,
+  `health` varchar(1000) NOT NULL,
   `mobile` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `status` varchar(10) NOT NULL
+  `status` varchar(10) NOT NULL COMMENT '0 - pending,\r\n1 - inprogress\r\n2 - completed\r\n3 - rejected',
+  `volunteer_id` int(10) NOT NULL,
+  `donor_id` int(10) NOT NULL,
+  `age` int(10) NOT NULL,
+  `weight` int(10) NOT NULL,
+  `prev_donate` varchar(1000) NOT NULL,
+  `surgery` varchar(1000) NOT NULL,
+  `other` varchar(1000) NOT NULL,
+  `hospital_name` varchar(100) NOT NULL,
+  `admission_no` int(10) NOT NULL,
+  `admission_date` date NOT NULL,
+  `unit` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 
