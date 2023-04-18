@@ -37,10 +37,13 @@
             color: white !important;
         }
     </style>
+    <?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    ?>
 </head>
-<?php
-session_start();
-?>
+
 
 
 <body id="body-pd">
@@ -48,7 +51,7 @@ session_start();
         <nav class="nav">
             <div class="container-fluid">
                 <ul class="nav">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link active" href="donor_home.php"><i class="fa fa-user" aria-hidden="true"></i>
                             Profile</a>
                     </li>
@@ -57,7 +60,9 @@ session_start();
                             Request</a>
                     </li>
                     <li class="nav-item" style="position: absolute;right: 10%;top: 6%">
-                        <label> <?php echo $_SESSION['fname'] ?></label>
+                        <label>
+                            <?php echo $_SESSION['fname'] ?>
+                        </label>
                     </li>
                     <li class="nav-item" style="position: absolute;right: 10px">
                         <a class="nav-link active" href="../index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -85,8 +90,8 @@ session_start();
                         type="button" role="tab" aria-controls="contact" aria-selected="false">Rejected</button>
                 </li> -->
             </ul>
-            <!-- new req content -->
             <div class="tab-content" id="myTabContent">
+                <!-- new req content -->
                 <div class="tab-pane fade show active" id="new" role="tabpanel" aria-labelledby="new-tab">
                     <div class="d-flex flex-row">
                         <div class="container py-5 h-100">
@@ -205,7 +210,6 @@ session_start();
                                         }
                                     } else {
                                         echo '<h4>No Record Found!<h4>';
-                                        exit();
                                     }
                                 }
 
@@ -214,10 +218,8 @@ session_start();
                         </div>
                     </div>
                 </div>
-
                 <!-- accepted req content -->
-
-                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="d-flex flex-row">
                         <div class="container py-5 h-100">
                             <div class="row d-flex  align-items-center h-100">
@@ -326,7 +328,6 @@ session_start();
                                         }
                                     } else {
                                         echo '<h4>No Record Found!<h4>';
-                                        exit();
                                     }
                                 }
                                 ?>
@@ -334,6 +335,8 @@ session_start();
                         </div>
                     </div>
                 </div>
+
             </div>
+        </div>
 
 </body>
