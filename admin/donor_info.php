@@ -11,7 +11,7 @@
 session_start();
 include '../db_conn.php';
 
-$don_id = $_SESSION['donor_id'];
+$don_id = $_GET['donor_id'] ? $_GET['donor_id'] : '';
 $sql = "SELECT * FROM users WHERE id ='$don_id'";
 $donor_data = mysqli_query($conn, $sql);
 $donor_data = $donor_data->fetch_assoc();

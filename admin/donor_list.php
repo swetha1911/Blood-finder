@@ -112,7 +112,10 @@ $result = mysqli_query($conn, $sql);
                    
                     </div>
                     <div class="card-footer text-center">
-                    <a href="donor_info.php"><button onclick= ' . $_SESSION['donor_id'] = $row['id'] . '" type="button" class="btn btn-primary">view</button> </a>
+           
+
+                    <button class="btn btn-primary" onclick="window.location.href = \'donor_info.php?donor_id='.$row['id']. '\'">View</button>
+
                     <button class="btn btn-danger" onclick="window.location.href = \'script/Delete_donor.php?don_id='.$row['id']. '\'">Delete</button>
                  
                     </div> 

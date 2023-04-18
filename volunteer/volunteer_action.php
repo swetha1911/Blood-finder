@@ -26,11 +26,11 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
-// $mail->Username = 'intelligentbloodfinder@gmail.com';
+$mail->Username = 'intelligentbloodfinder@gmail.com';
 //Password to use for SMTP authentication
-// $mail->Password = 'zntocopxxfbdvcwt';
-$mail->Username = 'sujay.sugunakar@gmail.com';
-$mail->Password = 'hlgbjnonfpewllbi';
+$mail->Password = 'zntocopxxfbdvcwt';
+// $mail->Username = 'sujay.sugunakar@gmail.com';
+// $mail->Password = 'hlgbjnonfpewllbi';
 
 //Set who the message is to be sent from
 //Note that with gmail you can only use your account address (same as `Username`)
@@ -117,7 +117,7 @@ if ($actionval == 'confirm') {
                     <label>unit required - <strong>{$dunit}</strong></label><br>
                 <p>if available/possible kindly call {$dName}&nbsp;({$dmobile}) </p><br>
                 <center><strong>Thank you!</strong></center>";
-                $mail->addAttachment('../img/blood_logo.jpg');
+                // $mail->addAttachment('../img/blood_logo.jpg');
                 if (!$mail->send()) {
                     echo 'Mailer Error: ' . $mail->ErrorInfo;
                 } else {

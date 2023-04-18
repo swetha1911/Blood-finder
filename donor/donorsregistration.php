@@ -75,7 +75,7 @@ $result = mysqli_query($conn, $sql);
                         </select>
                     </div>
                     <div class="mt-3 w-48">
-                        <input type="tel" class="form-control" name="mobile" placeholder="Phone Number">
+                        <input type="tel" class="form-control" maxlength="10" name="mobile" placeholder="Phone Number">
                     </div>
                     <div class="mt-3 w-48">
                         <input type="email" class="form-control" name="email" placeholder="Email Id">

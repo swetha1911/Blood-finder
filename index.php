@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="styles/style_1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php
+    if (isset($_SESSION)) {
+        session_unset();
+        session_destroy();
+    }
+    ?>
 </head>
 
 <body>
@@ -98,8 +104,8 @@
                     <p class=" card-text">Nor again is there anyone who loves or pursues or desires to obtain pain of
                         itself, because it is
                         pain</p>
-                        <a href="donees/doneesrequest.php" class="btn btn-danger border mt-4">Request</a>
-                        <a href="donees/donees_request_track.php" class="btn btn-danger border mt-4">Track</a>
+                    <a href="donees/doneesrequest.php" class="btn btn-danger border mt-4">Request</a>
+                    <a href="donees/donees_request_track.php" class="btn btn-danger border mt-4">Track</a>
                 </div>
             </div>
 
