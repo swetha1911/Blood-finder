@@ -45,7 +45,7 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
 
 ?>
 
-<body id="body-pd" >
+<body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
     </header>
@@ -193,8 +193,8 @@ $total_rejected_req = mysqli_num_rows($total_rejected_req);
                     </div>
                 </div>
             </div>
-       
-         
+
+
 
 
 

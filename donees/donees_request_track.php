@@ -374,7 +374,7 @@
                                         </strong>
                                         </p>
                                         <p class=\"small   mx-3 w-25\">
-                                        Location: <strong>
+                                        Blood-Group: <strong>
                                                 " . $bgroup . "
                                         </strong>
                                         </p>

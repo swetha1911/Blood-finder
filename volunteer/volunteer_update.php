@@ -44,6 +44,11 @@
                                 aria-hidden="true"></i>
                             Request</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="verification_criteria.php"><i class="fa fa-user"
+                                aria-hidden="true"></i>
+                            Screening Criteria</a>
+                    </li>
                     <li class="nav-item" style="position: absolute;right: 10%;top: 6%">
                         <label> <?php echo $_SESSION['fname'] ?></label>
                     </li>
