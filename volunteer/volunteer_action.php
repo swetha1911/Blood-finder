@@ -5,13 +5,14 @@ if (!isset($_SESSION)) {
 }
 include '../db_conn.php';
 
-use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer; // using external phpmailer package
 use PHPMailer\PHPMailer\SMTP;
 
-require "../../PHPMailer-master/src/PHPMailer.php";
+require "../../PHPMailer-master/src/PHPMailer.php"; // importing  external phpmailer package
 require "../../PHPMailer-master/src/SMTP.php";
 require "../../PHPMailer-master/src/Exception.php";
 
+// configuring php  
 
 $mail = new PHPMailer();
 $mail->isSMTP();
@@ -47,19 +48,19 @@ $reqId = isset($_GET['req_id']) ? $_GET['req_id'] : '';
 $actionval = isset($_GET['action']) ? $_GET['action'] : '';
 $blood = isset($_GET['blood']) ? $_GET['blood'] : 'sujay';
 
-if ($actionval == 'confirm') {
+if ($actionval == 'confirm') { //code block to be excuted for confirm click
 
     // fetching donees details for mail content
 
     $sql0 = "SELECT * FROM users WHERE id ='$reqId' AND role='2'"; // role = 2 (donees)
     $result0 = mysqli_query($conn, $sql0);
     if ($result0) {
-        $row0 = mysqli_fetch_assoc($result0);
+        $row0 = mysqli_fetch_assoc($result0); // fetching donees details to be attached in the mail
         $dName = $row0['f_name'];
         $dmobile = $row0['mobile'];
         $dhospital_name = $row0['hospital_name'];
         $dunit = $row0['unit'];
-        switch ($row0['bloodgroup']) {
+        switch ($row0['bloodgroup']) { // to find the blood name
             case "1":
                 $bgroup = "O+";
                 break;
@@ -102,7 +103,7 @@ if ($actionval == 'confirm') {
             $arr = [];
             $arr = array();
 
-            while ($row = mysqli_fetch_assoc($result1)) {
+            while ($row = mysqli_fetch_assoc($result1)) { // to send out a mail more that one donor.
                 array_push($arr, $row['email']);
                 $str_arr = explode("@", $row['email']);
                 $mail->addAddress($row['email'], $str_arr[0]);
@@ -116,56 +117,23 @@ if ($actionval == 'confirm') {
                     <label>unit required - <strong>{$dunit}</strong></label><br>
                 <p>if available/possible kindly call {$dName}&nbsp;({$dmobile}) </p><br>
                 <center><strong>Thank you!</strong></center>";
-                // $mail->addAttachment('../img/blood_logo.jpg');
                 if (!$mail->send()) {
                     echo 'Mailer Error: ' . $mail->ErrorInfo;
                 } else {
                     echo 'Message sent!';
                     sleep(2);
                     continue;
-                    //Section 2: IMAP
-                    //Uncomment these to save your message in the 'Sent Mail' folder.
-                    #if (save_mail($mail)) {
-                    #    echo "Message saved!";
-                    #}
-
                 }
 
             }
         }
 
     }
-} else if ($actionval == 'reject') {
+} else if ($actionval == 'reject') { //code block to be excuted for reject click
     $sql = "UPDATE users SET status = '3', volunteer_id='$id' WHERE id = '$reqId' AND role ='2'"; // role = 2 (donees) // status = 3 (rejected)
     $result = mysqli_query($conn, $sql);
-
-    // header("Location: volunteer_request_track.php?success= successfully updated");
-    // exit();
 }
-header("Location: volunteer_request_track.php?success= successfully updated");
+header("Location: volunteer_request_track.php?success= successfully updated");   // navigating back to volunteer track page.    
 exit();
-
-// / $mail->addAddress('sriramcrazofficial@gmail.com', 'Sriram');
-// $mail->msgHTML(file_get_contents('content.html'), __DIR__);
-//Section 2: IMAP
-//IMAP commands requires the PHP IMAP Extension, found at: https://php.net/manual/en/imap.setup.php
-//Function to call which uses the PHP imap_*() functions to save messages: https://php.net/manual/en/book.imap.php
-//You can use imap_getmailboxes($imapStream, '/imap/ssl', '*' ) to get a list of available folders or labels, this can
-//be useful if you are trying to get this working on a non-Gmail IMAP server.
-// function save_mail($mail)
-// {
-// //You can change 'Sent Mail' to any other folder or tag
-// $path = '{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail';
-
-// //Tell your server to open an IMAP connection using the same username and password as you used for SMTP
-// $imapStream = imap_open($path, $mail->Username, $mail->Password);
-
-// $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
-// imap_close($imapStream);
-
-// return $result;
-// }
-
-
 ob_end_flush();
 ?>

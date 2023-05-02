@@ -86,7 +86,7 @@
                         if (!isset($_SESSION)) {
                             session_start();
                         }
-                        if (isset($_REQUEST['userName'])) {
+                        if (isset($_REQUEST['userName'])) {                             
                             include '../db_conn.php';
                             $id = $_REQUEST['userName'];
                             // SQL query to select data from database
@@ -122,7 +122,7 @@
                                             break;
                                         }
                                         ;
-                                        if ($rows['status'] === '0') {
+                                        if ($rows['status'] === '0') {    // square box waiting for verification
                                         echo "<div class=\"w-48\">
                                 <div class=\"card mb-2\" style=\"border-radius: 15px;\">
                                     <div class=\"card-body p-4\">
@@ -133,7 +133,7 @@
                                             </strong>
                                             </span>
 
-                                            <badge class=\"badge bg-info\">Waiting for the verification</badge>
+                                            <badge class=\"badge bg-info\">Waiting for  verification</badge>
                                             </p>
                                             <div class=\"mt-2\" class=\"d-flexs\">
                                             <div class=\"d-flex flex-row justify-content-start flex-wrap\">
@@ -188,7 +188,7 @@
                                 </div>
                             </div>";
                                         }
-                                            if ($rows['status'] === '1') {
+                                            if ($rows['status'] === '1') {                      // square box for Waiting for Donor
                                         echo "<div class=\"w-48\">
                                         <div class=\"card mb-2\" style=\"border-radius: 15px;\">
                                             <div class=\"card-body p-4\">
@@ -301,7 +301,7 @@
                                                 <div class=\"mt-2\" class=\"d-flexs\">
                                                     <div class=\"d-flex flex-row justify-content-start flex-wrap\">
         
-                                                        <p class=\"small   mx-3 w-25\">
+                                                        <p class=\"small mx-3 w-25\">
                                                             Mobile : <strong>
                                                                 " . $rows['mobile'] . "
                                                             </strong>
